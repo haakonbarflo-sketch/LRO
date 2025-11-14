@@ -27,6 +27,13 @@ html, body {
     padding: 20px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
 /* Header */
 header {
     background-color: var(--primary);
@@ -253,6 +260,7 @@ footer .socials img:hover {
     font-weight: bold;
     border-radius: 5px;
   }
+
 
 
 
