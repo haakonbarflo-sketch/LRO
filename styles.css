@@ -59,7 +59,6 @@ nav ul li a {
 nav ul li a:hover,
 header .logo:hover {
 	color: #d1d1d1;
-    /*color: var(--header-hover-text); /* Mørkere farge ved hover */
 }
 
 /* Hamburger */
@@ -246,5 +245,6 @@ footer .socials img:hover {
     font-weight: bold;
     border-radius: 5px;
   }
+
 
 
