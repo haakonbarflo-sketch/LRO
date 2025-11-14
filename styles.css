@@ -14,6 +14,9 @@ html, body {
     background-color: white;
     display: flex;
     flex-direction: column;
+	padding: 0;
+	width: 100vw;   /* viewport width */
+    overflow-x: hidden; /* forhindrer at man kan dra siden horisontalt */
 }
 
 /* Innholdet drar siden oppover slik at footer alltid er nederst */
@@ -250,6 +253,7 @@ footer .socials img:hover {
     font-weight: bold;
     border-radius: 5px;
   }
+
 
 
 
