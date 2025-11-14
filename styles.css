@@ -46,17 +46,13 @@ header .logo {
     font-weight: bold;
     text-decoration: none;
     color: white; /* Endret til hvit */
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+	display: flex;
+	align-items: center;
 }
 
 /* Logo image */
 header .logo img {
-    height: 48px;     /* du kan justere denne til ønsket størrelse */
+    height: 60px;     /* du kan justere denne til ønsket størrelse */
     width: auto;      /* behold proporsjoner */
     display: block;
 }
@@ -278,6 +274,7 @@ footer .socials img:hover {
     font-weight: bold;
     border-radius: 5px;
   }
+
 
 
 
