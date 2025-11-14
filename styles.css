@@ -155,6 +155,11 @@ footer .socials img:hover {
     margin: 0;
 }
 
+/* Booking */
+.booking-container, #inline-widget-book-lro-undervisning {
+    width: 100%;
+    padding: 10px;
+}
 
 /* Kontakt */
 .contact-container {
@@ -245,6 +250,7 @@ footer .socials img:hover {
     font-weight: bold;
     border-radius: 5px;
   }
+
 
 
 
