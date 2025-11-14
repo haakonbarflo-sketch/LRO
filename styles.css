@@ -1,0 +1,222 @@
+/* Farger og font */
+:root {
+    --primary: #80d6f7;
+    --primary-dark: #4ab6de; /* hover-variant */
+    --header-hover-text: #004b6d;
+    --text: #333;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Innholdet drar siden oppover slik at footer alltid er nederst */
+.container {
+    flex: 1;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white; /* Endret til hvit */
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;       /* viktig! */
+    align-items: center; /* gjør dem horisontale og sentrerte */
+    gap: 20px;           /* mellomrom mellom lenkene */
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Endret til hvit */
+    font-weight: bold;
+}
+
+nav ul li a:hover,
+header .logo:hover {
+    color: var(--header-hover-text); /* Mørkere farge ved hover */
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white; /* Endret til hvit */
+}
+
+/* Mobilmeny */
+nav.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--primary);
+}
+
+nav.mobile-menu a {
+    text-decoration: none;
+    color: white; /* Endret til hvit */
+    font-size: 18px;
+}
+
+nav.mobile-menu a:hover {
+    color: var(--header-hover-text);
+}
+
+/* Responsiv meny */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    nav.mobile-menu.active {
+        display: flex;
+    }
+}
+
+/* Footer */
+footer {
+    width: 100%;       /* full bredde */
+    background-color: var(--primary);
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+
+footer .socials img {
+    width: 26px;
+    margin: 0 10px;
+    filter: brightness(0) invert(1); /* Gjør ikonene hvite */
+}
+
+footer .socials img:hover {
+    filter: brightness(0.7) invert(1);
+}
+
+/* Styling til socials i footer */
+.socials {
+    margin-top: 10px;
+}
+
+.socials a {
+    color: white;       /* ikonene blir hvite som tidligere bilder */
+    font-size: 24px;    /* størrelsen på ikonene */
+    margin: 0 10px;     /* mellomrom mellom ikonene */
+    transition: color 0.2s;
+}
+
+.socials a:hover {
+    color: #d1d1d1;    /* hover-effekt, litt lysere */
+}
+
+
+/*Om oss */
+
+.board-member {
+    margin-bottom: 20px;
+}
+
+.board-member h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.board-member p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* Kontakt */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;  /* gjør at elementene flytter seg under hverandre på smale skjermer */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;   /* maks bredde for layout, men større enn 900px container */
+    margin: 0 auto;
+}
+
+.contact-form {
+    flex: 1 1 500px;   /* tar minst 500px, vokser til ledig plass */
+	display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f9f9f9;  /* lys bakgrunn */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(128, 214, 247, 0.5);
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: var(--header-hover-text);
+    transform: translateY(-2px);
+}
+
+.contact-map {
+    flex: 1 1 500px;   /* minst 500px */
+    min-height: 400px; /* gjør kartet pent */
+}
+
