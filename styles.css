@@ -220,3 +220,29 @@ footer .socials img:hover {
     min-height: 400px; /* gjør kartet pent */
 }
 
+/* Cookies */
+#cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #80d6f7;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+  #cookie-consent button {
+    background: #fff;
+    color: #80d6f7;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
