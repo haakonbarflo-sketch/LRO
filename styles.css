@@ -48,6 +48,26 @@ header .logo {
     color: white; /* Endret til hvit */
 }
 
+header .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Logo image */
+header .logo img {
+    height: 48px;     /* du kan justere denne til ønsket størrelse */
+    width: auto;      /* behold proporsjoner */
+    display: block;
+}
+
+/* For mobilmeny: gjør den litt mindre */
+@media (max-width: 768px) {
+    header .logo img {
+        height: 40px;
+    }
+}
+
 nav ul {
     list-style: none; 
     padding: 0;
@@ -258,6 +278,7 @@ footer .socials img:hover {
     font-weight: bold;
     border-radius: 5px;
   }
+
 
 
 
