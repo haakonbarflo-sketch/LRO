@@ -47,3 +47,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// Sjekk om bruker allerede har akseptert
+  if(localStorage.getItem('cookieConsent') === 'true'){
+      document.getElementById('cookie-consent').style.display = 'none';
+      loadAnalytics();
+  }
+
+  document.getElementById('accept-cookies').onclick = function() {
+      localStorage.setItem('cookieConsent', 'true');
+      document.getElementById('cookie-consent').style.display = 'none';
+      loadAnalytics();
+  }
+
+  function loadAnalytics() {
+      // Legg til GA4-koden først når brukeren har godtatt
+      var script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-7QLV9LMEVN";
+      script.async = true;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7QLV9LMEVN', { 'anonymize_ip': true });
+  }
